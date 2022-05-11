@@ -9,4 +9,15 @@ the_board = {'top-L':' ','top-M':' ','top-R':' ',
              'mid-L':' ','mid-M':' ','mid-R':' ',
              'low-L':' ','low-M':' ','low-R':' '}
 
+turn = 'X'
+for i in range(9):
+    print_board(the_board)
+    print(f'Turn for {turn}. Move on which space?')
+    move = input()
+    the_board[move] = turn
+    if turn == 'X':
+        turn = '0'
+    else:
+        turn = 'X'
+
 print_board(the_board)
